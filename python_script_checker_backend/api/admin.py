@@ -1,3 +1,1 @@
-from django.contrib import admin
-
-# Register your models here.
+# Admin site configuration can be added here when models are defined.
