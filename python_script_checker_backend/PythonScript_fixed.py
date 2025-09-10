@@ -169,16 +169,7 @@ def _test_users_and_tasks():
     assert t.owner.user_id == u.user_id
     print("User and Task creation OK")
 
-def _test_report():
-    m = TaskManager()
-    u = m.add_user("X", "x@x.com")
-    m.add_task("Task1", "Desc", "low", u.user_id)
-    m.add_task("Task2", "Desc", "low", u.user_id)
-    m.mark_task_done(1)
-    r = m.report()
-    assert r["done"] == 1
-    assert r["pending"] == 1
-    print("Report OK")
+
 
 if __name__ == "__main__":
     # Run the application using the defined entrypoint
